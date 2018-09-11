@@ -1,21 +1,13 @@
 package com.bestteam.CashMoneyMarket.Models;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-import java.util.Date;
 
 @Entity
 @Table(name = "account")
 public class Account {
     @Id
     @GeneratedValue
-    @Column(name="id")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "email")
