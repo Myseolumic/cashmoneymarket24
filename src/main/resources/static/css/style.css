@@ -1,0 +1,25 @@
+/*
+    Color scheme (darker-brighter):
+        -#1c1f4c
+        -#00848c
+        -#037272
+        -#fccf17
+        -#fex20f
+        -#edebd9
+        -#fff
+*/
+html,body{
+    font-family: 'Lato', sans-serif;
+}
+.javascript-container{
+    display: none;
+}
+
+/* header */
+.front-page{
+    height: 90vh;
+}
+.front-page .container .row{
+    padding: 30vh 0 40vh;
+}
+/* buttons*/

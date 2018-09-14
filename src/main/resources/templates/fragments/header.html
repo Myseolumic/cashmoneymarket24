@@ -3,11 +3,19 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/">cashmoneymarket24</a>
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="/submitpost">Submit Post</a></li>
-            <li><a href="/posts">See Posts</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="#" th:href="@{/logout}">Log Out</a></li>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/submitpost">Submit Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/posts">See Posts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" th:href="@{/logout}">Log Out</a>
+            </li>
         </ul>
     </div>
 </header>

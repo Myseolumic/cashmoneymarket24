@@ -6,15 +6,23 @@
 <body>
 <header th:replace="fragments/header.html :: header">
 </header>
-<main>
+<main class="front-page">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div sec:authorize="isAuthenticated()">
                 u are in
+            </div>
+            <div class="col-sm-8 text-center">
+                <h1>Buy. Sell. Profit either way.</h1>
+            </div>
+            <div class="col-sm-8 text-center">
+                <a href="" class="btn btn-primary btn-lg">Sign-up now!</a>
+                <a href="" class="btn btn-outline-secondary btn-lg">Take a peek inside the market!</a>
             </div>
         </div>
     </div>
 </main>
+<div th:replace="fragments/javascripts.html :: javascripts"></div>
 
 </body>
 </html>
