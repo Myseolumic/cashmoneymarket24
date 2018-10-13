@@ -1,5 +1,22 @@
 <div th:fragment="javascripts" class="javascript-container">
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNdNd6Pv57B5jSBhago53nO36H4VmTtgs&callback=initMap">
+    </script>
     <script type="text/javascript">
-
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 58.378241, lng: 26.714755},
+                zoom: 16
+            });
+            var icon = {
+                url: "images/sellIcon.png"
+            }
+            var marker = new google.maps.Marker({
+                position: map.getCenter(),
+                icon: icon,
+                map: map
+            });
+        }
     </script>
 </div>

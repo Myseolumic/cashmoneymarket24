@@ -8,15 +8,20 @@
 </header>
 <main>
     <div class="container">
-        <div class="row">
-            <form action="#" th:action="@{/submitpost}" th:object="${post}" method="post">
-                <p>Title: <input type="text" th:field="*{title}"/></p>
-                <p>Message: <input type="text" th:field="*{message}"/></p>
-                <p><input type="submit" value="Submit"/></p>
-            </form>
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <form action="#" th:action="@{/submitpost}" th:object="${post}" method="post">
+                    <p>Title: <input type="text" th:field="*{title}"/></p>
+                    <p>Message: <input type="text" th:field="*{message}"/></p>
+                    <p><input type="submit" value="Submit"/></p>
+                    <div id="map"></div>
+                </form>
+            </div>
         </div>
     </div>
 </main>
+
+<div th:replace="fragments/javascripts.html :: javascripts"></div>
 
 </body>
 </html>
