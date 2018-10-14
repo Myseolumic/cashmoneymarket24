@@ -12,7 +12,7 @@
             <div class="col-sm-4 spacer">
                 <form action="#" th:action="@{/submitpost}" th:object="${post}" enctype="multipart/form-data"method="post">
                     <p>Title: <br><input type="text" th:field="*{title}"/></p>
-                    <br><input type="file" name="image"/><br>
+                    <p>Image: <input type="file" name="image"/><br></p>
                     <p>Message: <br><input type="text" th:field="*{message}"/></p>
                     <p class="hidden"><input id="latLng" type="text" th:field="*{location}"/></p>
                     <p><input class="btn btn-primary"type="submit" value="Submit"/></p>
