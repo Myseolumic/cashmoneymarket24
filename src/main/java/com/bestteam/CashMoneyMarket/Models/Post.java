@@ -16,6 +16,9 @@ public class Post {
     @Column(name = "message")
     private String message;
 
+    @Column(name = "location")
+    private String location;
+
     public String getTitle() {
         return title;
     }
@@ -30,5 +33,13 @@ public class Post {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

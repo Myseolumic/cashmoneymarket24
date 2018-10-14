@@ -10,8 +10,9 @@
     <div class="container">
         <div class="row">
             <tr th:each="post : ${posts}">
-                <td><a href="#" th:text="${post.title}">Title ...</a></td>
-                <td th:text="${post.message}">1</td>
+                <td><a href="#" th:text="${post.title}">Title ...</a><br></td>
+                <td th:text="${post.message}">1<br></td>
+                <td th:text="${post.location}"> test<br></td>
             </tr>
         </div>
     </div>
