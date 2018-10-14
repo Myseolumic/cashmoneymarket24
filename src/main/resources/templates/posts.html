@@ -8,11 +8,16 @@
 </header>
 <main>
     <div class="container">
-        <div class="row">
-            <tr th:each="post : ${posts}">
-                <td><a href="#" th:text="${post.title}">Title ...</a></td>
-                <td th:text="${post.message}">1</td>
-            </tr>
+        <div class="card-deck">
+            <div class="card"
+                 th:each="post : ${posts}">
+                <div class="card-body">
+                    <img class="card-img-top" th:src="${post.image}" alt="Card image cap">
+                    <h5 class="card-title" th:text="${post.title}">Title</h5>
+                    <p class="card-text"
+                       th:text="${post.message}">Message</p>
+                </div>
+            </div>
         </div>
     </div>
 </main>

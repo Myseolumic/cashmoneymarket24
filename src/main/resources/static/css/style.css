@@ -23,3 +23,9 @@ html,body{
     padding: 30vh 0 40vh;
 }
 /* buttons*/
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
