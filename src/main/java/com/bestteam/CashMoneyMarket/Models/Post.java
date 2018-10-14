@@ -1,5 +1,7 @@
 package com.bestteam.CashMoneyMarket.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,11 @@ public class Post {
 
     @Column(name = "location")
     private String location;
+
+    @JsonIgnore
+    @Lob
+    @Column(name = "image")
+    private String image;
 
     public String getTitle() {
         return title;
@@ -41,5 +48,13 @@ public class Post {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
