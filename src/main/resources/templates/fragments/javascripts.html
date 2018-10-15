@@ -2,38 +2,5 @@
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNdNd6Pv57B5jSBhago53nO36H4VmTtgs&callback=initMap">
     </script>
-    <script type="text/javascript">
-        var map;
-        var markers = [];
-        var icon = {
-            url: "images/sellIcon.png"
-        }
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 58.378241, lng: 26.714755},
-                zoom: 16
-            });
-
-            map.addListener('click', function(event){
-                addMarker(event.latLng);
-            });
-        }
-
-        function addMarker(location){
-            var marker = new google.maps.Marker({
-                position: location,
-                icon: icon,
-                map: map
-            });
-            clearMap();
-            document.getElementById('latLng').value = location;
-            markers.push(marker);
-        }
-        function clearMap(){
-            for(var i = 0; i < markers.length; i++) {
-                markers[i].setMap(null);
-            }
-        }
-    </script>
     <script src="js/index.js"></script>
 </div>

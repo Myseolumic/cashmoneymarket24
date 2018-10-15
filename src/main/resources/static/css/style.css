@@ -1,22 +1,35 @@
 /*
     Color scheme (darker-brighter):
-        -#1c1f4c
-        -#00848c
-        -#037272
-        -#fccf17
-        -#fex20f
-        -#edebd9
-        -#fff
+        -#25274D
+        -#464866
+        -#AAABB8
+        -#2E9CCA
+        -#29648A
+        -#F9F9F9
 */
 html,body{
     font-family: 'Lato', sans-serif;
+}
+header{
+    background-color: #25274D;
+    min-height: 8vh;
+}
+a{
+    text-decoration: none !important;
+}
+header a, .nav-sidebar a{
+    color: #f9f9f9;
+}
+.nav-sidebar a:hover, a:hover, a:focus, .active{
+    color: #29648A;
 }
 .javascript-container,
 .hidden{
     display: none;
 }
-.spacer{
-    margin-top: 30px;
+.sidebar{
+    min-height:92vh;
+    background-color: #464866;
 }
 
 /* header */
@@ -36,9 +49,12 @@ form p input{
     padding-left: 3px;
 }
 /* cards */
+.card-deck .card{
+
+}
 .card-img-top {
     width: 100%;
-    height: 20vw;
+    max-height: 18vw;
     object-fit: cover;
 }
 

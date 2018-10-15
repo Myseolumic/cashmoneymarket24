@@ -24,10 +24,12 @@ public class PostController {
     @PostMapping("/submitpost")
     public String submitPost(@RequestParam String title,
                              @RequestParam String message,
-                             @RequestParam MultipartFile image) {
+                             @RequestParam MultipartFile image,
+                             @RequestParam String location) {
         Post post = new Post();
         post.setTitle(title);
         post.setMessage(message);
+        post.setLocation(location);
         try {
             post.setImage(getImageBase64Format(image));
         } catch (Exception e) {
@@ -61,6 +63,7 @@ public class PostController {
     }
 
     private String getImageBase64Format(MultipartFile file) throws Exception {
+        if (file.getContentType().equals("application/octet-stream")) return null;
         return "data:" + file.getContentType() + ";base64," + Base64.encodeBase64String(file.getBytes());
     }
 }
