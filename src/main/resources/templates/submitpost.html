@@ -8,6 +8,36 @@
 </header>
 <main>
     <div class="container">
+        <div class="row">
+            <form action="#" th:action="@{/submitpost}" enctype="multipart/form-data" method="post">
+                <table>
+                    <tr>
+                        <td th:text="#{label.postTitle}">
+                            Title:
+                        </td>
+                        <td>
+                            <input type="text" name="title"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td th:text="#{label.postMessage}">
+                            Message:
+                        </td>
+                        <td>
+                            <input type="text" name="message"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td th:text="#{label.postImage}">
+                            Image:
+                        </td>
+                        <td>
+                            <input type="file" name="image"/>
+                        </td>
+                    </tr>
+                </table>
+                <p><input type="submit" value="Submit"/></p>
+            </form>
         <div class="row justify-content-center">
             <div class="col-sm-5 mt-4 pt-2 card">
                 <form action="#" th:action="@{/submitpost}" enctype="multipart/form-data" method="post">

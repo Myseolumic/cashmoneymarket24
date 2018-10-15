@@ -10,11 +10,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-8 text-center">
-                <h1>Buy. Sell. Profit either way.</h1>
+                <h1 th:text="#{label.tagline}">Buy. Sell. Profit either way.</h1>
             </div>
             <div class="col-sm-8 text-center">
-                <a href="login" class="btn btn-primary btn-lg">Sign-up now!</a>
-                <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#peekMarket">Take a peek inside the market!</button>
+                <a href="login" class="btn btn-primary btn-lg" th:text="#{label.login}">Login</a>
+                <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#peekMarket" th:text="#{label.takePeek}">Take a peek inside the market!</button>
             </div>
         </div>
 
@@ -24,7 +24,7 @@
 
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">The Market</h4>
+                        <h4 class="modal-title" th:text="#{label.market}">The Market</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
