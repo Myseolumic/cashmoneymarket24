@@ -12,6 +12,12 @@ $('#peekMarket').on('show.bs.modal', function (e) {
     });
 });
 
+$('.post-location').each(function(){
+    var coords = $(this).attr("value").replace('(','').replace(')','').split(',');
+    var parsedCoords = [coords[0], coords[1]];
+    console.log(parsedCoords);
+})
+
 var map;
 var markers = [];
 var icon = {
@@ -19,6 +25,7 @@ var icon = {
 }
 
 function initMap() {
+    if(document.getElementById('map') == null) return;
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 58.378241, lng: 26.714755},
         zoom: 16
