@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "account")
+@Table(name = "posts")
 public class Post {
     @Id
     @GeneratedValue
     @Column(name = "id")
     private Long id;
+
+    @Column(name = "sellerId")
+    private Long sellerId;
 
     @Column(name = "title")
     private String title;
