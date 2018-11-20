@@ -23,6 +23,12 @@ header a, .nav-sidebar a{
 .nav-sidebar a:hover, a:hover, a:focus, .active{
     color: #29648A;
 }
+.nav.language{
+    text-align: right;
+}
+.nav.language a{
+    flex: 1 1 100%;
+}
 .javascript-container,
 .hidden{
     display: none;
