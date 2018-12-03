@@ -51,6 +51,3 @@ function clearMap(){
         markers[i].setMap(null);
     }
 }
-$.get("/user", function(data) {
-    $("#dropdownMenuButton").html(data.principal.fullName);
-});
